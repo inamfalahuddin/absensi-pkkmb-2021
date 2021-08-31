@@ -63,8 +63,8 @@ function App() {
           <div className="card-footer">
             <div className="card-form-group text-center">
               <h5>
-                PKKMB 2021 <br /> Fakultas Teknologi Informasi Universitas Mercu
-                Buana Yogyakarta
+                Panitia PKKMB 2021 <br /> Fakultas Teknologi Informasi
+                Universitas Mercu Buana Yogyakarta
               </h5>
             </div>
           </div>
