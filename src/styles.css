@@ -394,3 +394,7 @@ select option {
 .fadeIn {
   animation: fadeIn 0.5s ease;
 }
+
+.fw-bold {
+  font-weight: bold;
+}

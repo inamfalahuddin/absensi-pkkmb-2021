@@ -6,7 +6,7 @@ import IconHMPSSI from "./assets/images/WhatsApp_Image_2021-08S-02_at_19.16 1.pn
 import ImageBersama from "./assets/images/bg-foto-bersama.png";
 import Form from "./Components/Form";
 import Alert from "./Components/Alert";
-=
+
 function App() {
   const [formDisplay, setFormDisplay] = useState(true);
   const [loading, setLoading] = useState(true);
