@@ -3,13 +3,13 @@ import IconUMBY from "./assets/images/Logo_umcy 1.png";
 import IconFTI from "./assets/images/1629882016617 1.png";
 import IconHMPSTI from "./assets/images/WhatsApp_Image_2021-08-02_at_19.16 1.png";
 import IconHMPSSI from "./assets/images/WhatsApp_Image_2021-08S-02_at_19.16 1.png";
-import ImageBersama from "./assets/images/Group 71.png";
+import ImageBersama from "./assets/images/bg-foto-bersama.png";
 import Form from "./Components/Form";
 import Alert from "./Components/Alert";
 
 function App() {
   const [formDisplay, setFormDisplay] = useState(true);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const [input, setInput] = useState({
     nim: "",
