@@ -381,3 +381,16 @@ select option {
     width: 50%;
   }
 } /*# sourceMappingURL=style.min.css.map */
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease;
+}

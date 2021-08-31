@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import IconUMBY from "./assets/images/Logo_umcy 1.png";
 import IconFTI from "./assets/images/1629882016617 1.png";
 import IconHMPSTI from "./assets/images/WhatsApp_Image_2021-08-02_at_19.16 1.png";
@@ -16,6 +16,10 @@ function App() {
     nama: "",
     email: "",
   });
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
 
   return (
     <section>
@@ -40,7 +44,7 @@ function App() {
               <img className="mx-2" src={IconHMPSSI} alt="" />
             </div>
             <div className="card-header-images">
-              <img src={ImageBersama} alt="" />
+              <img src={ImageBersama} alt="Foto Bersama" className="fadeIn" />
             </div>
           </div>
           <div className="card-body text-center my-4 w-100">
