@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Form({ setFormDisplay, loading, setLoading, input, setInput }) {
-  const option = ["Informatika", "Sistem Informasi"];
+  const option = ["Prodi", "Informatika", "Sistem Informasi"];
   const [prodi, setProdi] = useState("");
 
   const { nim, nama, email } = input;

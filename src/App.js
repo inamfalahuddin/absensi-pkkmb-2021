@@ -22,7 +22,11 @@ function App() {
       {loading ? <span className="bg-bar"></span> : ""}
 
       <div className="container d-flex justify-content-center">
-        <div className="card py-5 px-4">
+        <div
+          className={`card py-5 px-4 ${
+            window.screen.availHeight >= 831 ? "h-100" : ""
+          } `}
+        >
           <div className="card-header uppercase text-center">
             <div className="card-header-title mb-4">
               <h2>absensi kehadiran</h2>
@@ -54,10 +58,10 @@ function App() {
           </div>
           <div className="card-footer">
             <div className="card-form-group text-center">
-              <h>
-                Terimakasih telah mengikuti PKKMB 2021 Universitas Mercu Buana
-                Yogyakarta
-              </h>
+              <h5>
+                PKKMB 2021 <br /> Fakultas Teknologi Informasi Universitas Mercu
+                Buana Yogyakarta
+              </h5>
             </div>
           </div>
         </div>
