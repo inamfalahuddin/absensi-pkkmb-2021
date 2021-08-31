@@ -279,6 +279,7 @@ section {
   text-align: start;
 }
 form button {
+  display: block;
   width: 100%;
   border: none;
   border-radius: 20px;
