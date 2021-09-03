@@ -5,6 +5,7 @@ function Form({ setFormDisplay, loading, setLoading, input, setInput }) {
   const [prodi, setProdi] = useState("");
 
   const { nim, nama, email } = input;
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setInput({
@@ -39,14 +40,21 @@ function Form({ setFormDisplay, loading, setLoading, input, setInput }) {
         return res.json();
       })
       .then(function (data) {
-        console.log(JSON.stringify(data));
         setFormDisplay(false);
         setLoading(false);
       })
-      .catch((err) => setFormDisplay(true));
+      .catch((err) => {
+        setFormDisplay(true);
+        setError([true, err.message]);
+      });
   };
 
-  return (
+  return error ? (
+    <>
+      <h4>Maaf Terjadi Kesalahan !</h4>
+      <p>Periksa koneksi anda dan coba kembali</p>
+    </>
+  ) : (
     <form
       className="w-100"
       onSubmit={submitHandler}

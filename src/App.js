@@ -10,27 +10,24 @@ import Alert from "./Components/Alert";
 function App() {
   const [formDisplay, setFormDisplay] = useState(true);
   const [loading, setLoading] = useState(true);
-
   const [input, setInput] = useState({
     nim: "",
     nama: "",
     email: "",
   });
 
+  const height = window.screen.availHeight;
+
   useEffect(() => {
     setLoading(false);
-  }, []);
+  }, [height]);
 
   return (
     <section>
       {loading ? <span className="bg-bar"></span> : ""}
 
       <div className="container d-flex justify-content-center">
-        <div
-          className={`card py-5 px-4 ${
-            window.screen.availHeight >= 831 ? "h-100" : ""
-          } `}
-        >
+        <div className={`card py-5 px-4 ${height >= 831 ? "h-100" : ""} `}>
           <div className="card-header uppercase text-center">
             <div className="card-header-title mb-4">
               <h2>absensi kehadiran</h2>
