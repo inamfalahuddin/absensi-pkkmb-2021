@@ -16,18 +16,24 @@ function App() {
     email: "",
   });
 
-  const height = window.screen.availHeight;
+  const [screenHeight, setScreenHeight] = useState();
 
   useEffect(() => {
     setLoading(false);
-  }, [height]);
+
+    if (window.screen.availHeight >= 831) {
+      setScreenHeight(true);
+    } else {
+      setScreenHeight(false);
+    }
+  }, [screenHeight]);
 
   return (
     <section>
       {loading ? <span className="bg-bar"></span> : ""}
 
       <div className="container d-flex justify-content-center">
-        <div className={`card py-5 px-4 ${height >= 831 ? "h-100" : ""} `}>
+        <div className={`card py-5 px-4 ${screenHeight ? "h-100" : ""} `}>
           <div className="card-header uppercase text-center">
             <div className="card-header-title mb-4">
               <h2>absensi kehadiran</h2>
@@ -54,7 +60,11 @@ function App() {
                 setLoading={setLoading}
               />
             ) : (
-              <Alert nama={input.nama} />
+              <Alert
+                nama={input.nama}
+                screenHeight={screenHeight}
+                setScreenHeight={setScreenHeight}
+              />
             )}
           </div>
           <div className="card-footer">
