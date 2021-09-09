@@ -1,0 +1,15 @@
+{formDisplay ? (
+              <Form
+                input={input}
+                setInput={setInput}
+                setFormDisplay={setFormDisplay}
+                loading={loading}
+                setLoading={setLoading}
+              />
+            ) : (
+              <Alert
+                nama={input.nama}
+                screenHeight={screenHeight}
+                setScreenHeight={setScreenHeight}
+              />
+            )}

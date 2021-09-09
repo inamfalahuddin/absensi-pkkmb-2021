@@ -4,17 +4,17 @@ import IconFTI from "./assets/images/1629882016617 1.png";
 import IconHMPSTI from "./assets/images/WhatsApp_Image_2021-08-02_at_19.16 1.png";
 import IconHMPSSI from "./assets/images/WhatsApp_Image_2021-08S-02_at_19.16 1.png";
 import ImageBersama from "./assets/images/bg-foto-bersama.png";
-import Form from "./Components/Form";
-import Alert from "./Components/Alert";
+// import Form from "./Components/Form";
+// import Alert from "./Components/Alert";
 
 function App() {
-  const [formDisplay, setFormDisplay] = useState(true);
+  // const [formDisplay, setFormDisplay] = useState(true);
   const [loading, setLoading] = useState(true);
-  const [input, setInput] = useState({
-    nim: "",
-    nama: "",
-    email: "",
-  });
+  // const [input, setInput] = useState({
+  //   nim: "",
+  //   nama: "",
+  //   email: "",
+  // });
 
   const [screenHeight, setScreenHeight] = useState();
 
@@ -51,21 +51,8 @@ function App() {
             </div>
           </div>
           <div className="card-body text-center my-4 w-100">
-            {formDisplay ? (
-              <Form
-                input={input}
-                setInput={setInput}
-                setFormDisplay={setFormDisplay}
-                loading={loading}
-                setLoading={setLoading}
-              />
-            ) : (
-              <Alert
-                nama={input.nama}
-                screenHeight={screenHeight}
-                setScreenHeight={setScreenHeight}
-              />
-            )}
+            <h2>Terimakasih telah mengikuti PKKMB FTI 2021</h2>
+            <p>Selamat Datang Di Fakultas Teknologi Informasi !!</p>
           </div>
           <div className="card-footer">
             <div className="card-form-group text-center">
